@@ -1,0 +1,3 @@
+import{Link,NavLink}from"react-router-dom";
+import React from "react";
+import{useSelector}from"react-redux";import{Leaf,ShoppingBag}from"lucide-react";import{selectCartCount}from"../redux/CartSlice";export default function Navbar(){const count=useSelector(selectCartCount);return <header className="navbar"><Link className="brand" to="/">🌿 Paradise <b>Nursery</b></Link><nav><NavLink to="/">Home</NavLink><NavLink to="/plants">Plants</NavLink><NavLink to="/cart"><ShoppingBag size={17}/> Cart <span className="badge">{count}</span></NavLink></nav></header>}
